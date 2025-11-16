@@ -71,3 +71,33 @@ void pesanTiket() {
     } else {
         cout << "Pilihan tidak valid!\n"; return;
     }
+cout << "\nApakah ingin penerbangan transit?\n";
+    cout << "1. Ya (Tambah Rp300.000)\n";
+    cout << "2. Tidak\n";
+    cout << "Pilihan: ";
+    cin >> pilihanTransit;
+
+    if (pilihanTransit == 1) {
+        p.transit = "Transit";
+        hargaDasar += 300000;
+    } else {
+        p.transit = "Langsung";
+    }
+
+    cout << "\nPilih nomor kursi : ";
+    cin >> p.seat;
+
+    cout << "\nMasukkan kode promo (atau masukkan tanda - jika tidak ada): ";
+    cin >> p.kodePromo;
+
+    if (p.kodePromo == "KELOMPOK2") {
+        hargaDasar *= 0.9; // Diskon 10%
+        cout << "Anda mendapatkan potongan 10%.\n";
+    } else if (p.kodePromo == "-") {
+        p.kodePromo = "";
+    } else {
+        cout << "Kode promo tidak valid.\n";
+        p.kodePromo = "";
+    }
+
+    p.harga = hargaDasar;
