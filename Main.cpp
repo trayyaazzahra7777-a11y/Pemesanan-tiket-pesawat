@@ -93,7 +93,7 @@ cout << "\nApakah ingin penerbangan transit?\n";
     cin >> p.kodePromo;
 
     if (p.kodePromo == "KELOMPOK2") {
-        hargaDasar *= 0.9; // Diskon 10%
+        hargaDasar *= 0.9; 
         cout << "Anda mendapatkan potongan 10%.\n";
     } else if (p.kodePromo == "-") {
         p.kodePromo = "";
