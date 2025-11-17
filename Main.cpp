@@ -32,6 +32,8 @@ void tampilRiwayat() {
         cout << "Kode Promo: " << (riwayat[i].kodePromo.empty() ? "-" : riwayat[i].kodePromo) << endl;
         cout << "Harga: Rp" << riwayat[i].harga << endl;
     }
+
+}
 void pesanTiket() {
     Pemesanan p;
     int pilihanTujuan, pilihanKelas, pilihanTransit;
@@ -70,6 +72,7 @@ void pesanTiket() {
     } else {
         cout << "Pilihan tidak valid!\n"; return;
     }
+
 cout << "\nApakah ingin penerbangan transit?\n";
     cout << "1. Ya (Tambah Rp300.000)\n";
     cout << "2. Tidak\n";
@@ -99,7 +102,7 @@ cout << "\nApakah ingin penerbangan transit?\n";
         p.kodePromo = "";
     }
 
-    p.harga = hargaDasar; 
+    p.harga = hargaDasar;
 cout << "\n=== RINCIAN PEMESANAN ===\n";
     cout << "Nama: " << p.nama << endl;
     cout << "Tujuan: " << p.tujuan << endl;
